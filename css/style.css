@@ -1,0 +1,697 @@
+/* =====================
+RESET & BASE
+===================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================
+HEADER
+===================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 100;
+  background: #000;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* =====================
+HERO
+===================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transform: scale(1.3);
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-title {
+  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-style: italic;
+  font-weight: 200;
+  font-size: clamp(48px, 12vw, 165px);
+  line-height: 0.95;
+  white-space: nowrap;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-family: 'Garet', sans-serif;
+  font-size: clamp(14px, 2vw, 25px);
+  font-weight: 300;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+/* =====================
+RESPONSIVE NAV
+===================== */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* =====================
+O PROJEKCIE – LAYOUT
+===================== */
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.project-left {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+.project-left::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.project-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+  filter: grayscale(100%);
+  z-index: 1;
+}
+
+.project-heading {
+  position: relative;
+  z-index: 3;
+  padding: 6rem 4rem;
+}
+
+.project-title {
+  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(48px, 7vw, 90px);
+  color: #d6300c;
+  line-height: 1;
+}
+
+.project-subtitle {
+  font-family: 'Garet', sans-serif;
+  font-size: 26px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.project-right {
+  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background-color: #141313;
+}
+
+.project-right p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #fffff1;
+  margin-bottom: 1.8rem;
+  max-width: 520px;
+}
+
+.project-right strong {
+  font-weight: 600;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #b5231f;
+}
+
+@media (max-width: 900px) {
+  .project {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .project-left {
+    min-height: 60vh;
+  }
+
+  .project-heading,
+  .project-right {
+    padding: 4rem 2rem;
+  }
+}
+
+/* =====================
+O NAS – FULL BLEED
+===================== */
+.about-section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.about-section .about-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+/* przybliżenie na duże ekrany */
+@media (min-width: 1600px) {
+  .about-section .about-bg {
+    transform: scale(1.2);
+    object-position: center top;
+  }
+}
+
+.about-section .about-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.55) 45%,
+    rgba(0,0,0,0.85) 100%
+  );
+  z-index: 1;
+}
+
+.about-section .about-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 4rem;
+}
+
+.about-section .about-left {
+  max-width: 520px;
+}
+
+.about-section .about-title {
+  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(56px, 7vw, 90px);
+  color: #d6300c;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.about-section .about-text {
+  font-family: 'Garet', sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #fffff1;
+  padding-left: 10%;
+}
+
+.about-section .about-right {
+  align-self: flex-end;
+  max-width: 420px;
+}
+
+.about-section .about-team-title {
+  font-family: 'Garet', sans-serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #fffff1;
+}
+
+.about-section .about-line {
+  width: 100%;
+  max-width: 360px;
+  height: 1px;
+  background-color: #fffff1;
+  margin: 1rem 0 2rem;
+}
+
+.about-section .about-team-list {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section .about-team-list li {
+  font-family: 'Garet', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+  color: #fffff1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .about-section .about-inner {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem;
+  }
+
+  .about-section .about-right {
+    margin-top: 3rem;
+    align-self: flex-start;
+  }
+
+  
+}
+
+
+/* =====================
+   SONORE LAB – LAYOUT
+===================== */
+
+.sonorelab {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+  /* background-color: #141313; */
+  overflow: hidden;
+}
+
+/* =====================
+   LEWA CZĘŚĆ
+===================== */
+
+.sonorelab-left {
+  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #141313;
+
+}
+
+.sonorelab-title {
+  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 90px;
+  line-height: 1;
+  color: #c22200;
+  margin-bottom: 0.2em;
+}
+
+/* .sonorelab-tagline {
+  font-family: 'Garet', sans-serif;
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #fffff1;
+  margin-bottom: 2.5rem;
+} */
+
+.sonorelab-text {
+  font-family: 'Garet', sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #fffff1;
+  max-width: 520px;
+}
+
+/* .sonorelab-heading {
+  display: inline-block; 
+} */
+
+.sonorelab-subtitle {
+  display: block;
+  text-align: center;
+  margin-top: 0;
+}
+
+
+/* =====================
+   PRAWA CZĘŚĆ – ZDJĘCIE
+===================== */
+
+.sonorelab-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.sonorelab-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center ;
+  filter: grayscale(100%);
+  transform: scale(1.15);
+}
+
+@media (max-width: 900px) {
+  .sonorelab {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .sonorelab-left {
+    /* padding: 4rem 2rem; */
+    min-height: 60vh;
+  }
+
+  .sonorelab-title {
+    font-size: clamp(48px, 10vw, 72px);
+  }
+
+  .sonorelab-right {
+    min-height: 60vh;
+  }
+     .sonorelab-image {
+    /* object-fit: contain; */
+    /* transform: none; */
+    /* background-color: #000; */
+    object-fit: contain;
+    object-position: center; /* lub center top w zależności od kadru */
+    width: 100%;
+    height: auto; /* wysokość dopasuje się proporcjonalnie */
+  }
+  /* .sonorelab-content {
+    padding-bottom: 2rem;
+  } */
+
+  /* .sonorelab-image-wrapper {
+    margin-top: 1.5rem;
+  } */
+  /* .sonorelab-section {
+    min-height: auto;
+  } */
+
+  .recordings-title {
+    padding: 2.5rem 2rem;
+  }
+
+  .recordings-link {
+    bottom: 2.5rem;
+  }
+   .recordings-button {
+    white-space: nowrap;
+  }
+
+}
+
+@media (min-width: 901px) {
+  .sonorelab-title {
+    white-space: nowrap;
+  }
+}
+
+/* =====================
+   NAGRANIA – FULLSCREEN
+===================== */
+
+.recordings-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* TŁO */
+.recordings-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  z-index: 0;
+  transform: scale(1.2);
+}
+
+/* DELIKATNE PRZYCIEMNIENIE */
+.recordings-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* TYTUŁ */
+.recordings-title {
+  position: relative;
+  z-index: 2;
+  padding: 4rem;
+  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(56px, 7vw, 90px);
+  color: #d6300c;
+}
+
+/* LINK NA DOLE */
+.recordings-link {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* BUTTON */
+.recordings-button {
+  font-family: 'Garet', sans-serif;
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #fffff1;
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  border: 1px solid rgba(255, 255, 241, 0.6);
+  transition: all 0.3s ease;
+}
+
+.recordings-button:hover {
+  background-color: rgba(255, 255, 241, 0.1);
+  border-color: #fffff1;
+}
+
+
+/* =====================
+   FOOTER – KONTAKT
+===================== */
+
+.contact-footer {
+  width: 100%;
+  background-color: #000;
+  color: #fffff1;
+}
+
+/* GÓRNY PAS */
+.contact-top {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  position: relative;
+   
+}
+
+.contact-title {
+  text-align: center;
+  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 90px;
+  color: #d6300c;
+  margin-bottom: 3rem;
+}
+
+/* OSOBY */
+.contact-people {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-person {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: 'Garet', sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #fffff1;
+    text-align: center;
+}
+
+.contact-person .role {
+  opacity: 0.85;
+}
+
+/* DOLNA CZĘŚĆ */
+.contact-bottom {
+  position: relative;
+  min-height: 65vh;
+  overflow: hidden;
+}
+
+.contact-bg {
+ position: absolute;   /* ← TO JEST KLUCZ */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   object-position: 50% 25%;
+  filter: grayscale(100%);
+  z-index: 0;
+ 
+}
+
+/* INFO */
+.contact-info {
+ position: absolute;
+  bottom: 2.5rem;          /* odległość od dołu zdjęcia */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: 'Garet', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fffff1;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-top {
+    padding: 3rem 2rem;
+  }
+
+  .contact-title {
+    font-size: clamp(56px, 10vw, 72px);
+  }
+
+  .contact-people {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .contact-person {
+    font-size: 22px;
+  }
+
+  .contact-info {
+    font-size: 22px;
+    padding: 2rem;
+    text-align: center;
+  }
+    .contact-bg {
+    object-fit: contain;
+    object-position: center; /* lub center top w zależności od kadru */
+    width: 100%;
+    height: auto; /* wysokość dopasuje się proporcjonalnie */
+  }
+}
