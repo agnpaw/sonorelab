@@ -18,9 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* =====================
-HEADER
-===================== */
+/* HEADER */
 .site-header {
   position: fixed;
   top: 0;
@@ -58,10 +56,33 @@ HEADER
   height: 2px;
   background-color: #fff;
 }
+.nav {
+  display: flex;
+  align-items: center;
+}
 
-/* =====================
-HERO
-===================== */
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.lang-switch button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: "Garet", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.lang-switch button.active {
+  opacity: 1;
+}
+
+/* HERO */
 .hero {
   position: relative;
   width: 100%;
@@ -89,7 +110,7 @@ HERO
 }
 
 .hero-title {
-  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 200;
   font-size: clamp(48px, 12vw, 165px);
@@ -99,7 +120,7 @@ HERO
 }
 
 .hero-subtitle {
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: clamp(14px, 2vw, 25px);
   font-weight: 300;
   letter-spacing: 6px;
@@ -107,9 +128,7 @@ HERO
   margin-top: 12px;
 }
 
-/* =====================
-RESPONSIVE NAV
-===================== */
+/* RESPONSIVE NAV */
 @media (max-width: 768px) {
   .nav-list {
     display: none;
@@ -131,9 +150,7 @@ RESPONSIVE NAV
   }
 }
 
-/* =====================
-O PROJEKCIE – LAYOUT
-===================== */
+/* O PROJEKCIE – LAYOUT */
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -148,7 +165,7 @@ O PROJEKCIE – LAYOUT
 }
 
 .project-left::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.25);
@@ -173,7 +190,7 @@ O PROJEKCIE – LAYOUT
 }
 
 .project-title {
-  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
   font-size: clamp(48px, 7vw, 90px);
@@ -182,7 +199,7 @@ O PROJEKCIE – LAYOUT
 }
 
 .project-subtitle {
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: 26px;
   letter-spacing: 4px;
   color: #ffffff;
@@ -231,9 +248,7 @@ O PROJEKCIE – LAYOUT
   }
 }
 
-/* =====================
-O NAS – FULL BLEED
-===================== */
+/* O NAS */
 .about-section {
   position: relative;
   width: 100vw;
@@ -253,7 +268,6 @@ O NAS – FULL BLEED
   transition: transform 0.5s ease;
 }
 
-/* przybliżenie na duże ekrany */
 @media (min-width: 1600px) {
   .about-section .about-bg {
     transform: scale(1.2);
@@ -266,9 +280,9 @@ O NAS – FULL BLEED
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.55) 45%,
-    rgba(0,0,0,0.85) 100%
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.85) 100%
   );
   z-index: 1;
 }
@@ -289,7 +303,7 @@ O NAS – FULL BLEED
 }
 
 .about-section .about-title {
-  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
   font-size: clamp(56px, 7vw, 90px);
@@ -299,7 +313,7 @@ O NAS – FULL BLEED
 }
 
 .about-section .about-text {
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: 20px;
   line-height: 1.7;
   color: #fffff1;
@@ -312,7 +326,7 @@ O NAS – FULL BLEED
 }
 
 .about-section .about-team-title {
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: 14px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -333,7 +347,7 @@ O NAS – FULL BLEED
 }
 
 .about-section .about-team-list li {
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 0.8rem;
@@ -351,14 +365,9 @@ O NAS – FULL BLEED
     margin-top: 3rem;
     align-self: flex-start;
   }
-
-  
 }
 
-
-/* =====================
-   SONORE LAB – LAYOUT
-===================== */
+/*  SONORE LAB */
 
 .sonorelab {
   display: grid;
@@ -368,21 +377,16 @@ O NAS – FULL BLEED
   overflow: hidden;
 }
 
-/* =====================
-   LEWA CZĘŚĆ
-===================== */
-
 .sonorelab-left {
   padding: 6rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #141313;
-
 }
 
 .sonorelab-title {
-  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
   font-size: 90px;
@@ -391,37 +395,19 @@ O NAS – FULL BLEED
   margin-bottom: 0.2em;
 }
 
-/* .sonorelab-tagline {
-  font-family: 'Garet', sans-serif;
-  font-size: 15px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #fffff1;
-  margin-bottom: 2.5rem;
-} */
-
 .sonorelab-text {
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: 20px;
   line-height: 1.7;
   color: #fffff1;
   max-width: 520px;
 }
 
-/* .sonorelab-heading {
-  display: inline-block; 
-} */
-
 .sonorelab-subtitle {
   display: block;
   text-align: center;
   margin-top: 0;
 }
-
-
-/* =====================
-   PRAWA CZĘŚĆ – ZDJĘCIE
-===================== */
 
 .sonorelab-right {
   position: relative;
@@ -434,7 +420,7 @@ O NAS – FULL BLEED
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center ;
+  object-position: center;
   filter: grayscale(100%);
   transform: scale(1.15);
 }
@@ -446,7 +432,6 @@ O NAS – FULL BLEED
   }
 
   .sonorelab-left {
-    /* padding: 4rem 2rem; */
     min-height: 60vh;
   }
 
@@ -457,25 +442,12 @@ O NAS – FULL BLEED
   .sonorelab-right {
     min-height: 60vh;
   }
-     .sonorelab-image {
-    /* object-fit: contain; */
-    /* transform: none; */
-    /* background-color: #000; */
+  .sonorelab-image {
     object-fit: contain;
-    object-position: center; /* lub center top w zależności od kadru */
+    object-position: center;
     width: 100%;
-    height: auto; /* wysokość dopasuje się proporcjonalnie */
+    height: auto;
   }
-  /* .sonorelab-content {
-    padding-bottom: 2rem;
-  } */
-
-  /* .sonorelab-image-wrapper {
-    margin-top: 1.5rem;
-  } */
-  /* .sonorelab-section {
-    min-height: auto;
-  } */
 
   .recordings-title {
     padding: 2.5rem 2rem;
@@ -484,10 +456,9 @@ O NAS – FULL BLEED
   .recordings-link {
     bottom: 2.5rem;
   }
-   .recordings-button {
+  .recordings-button {
     white-space: nowrap;
   }
-
 }
 
 @media (min-width: 901px) {
@@ -496,9 +467,7 @@ O NAS – FULL BLEED
   }
 }
 
-/* =====================
-   NAGRANIA – FULLSCREEN
-===================== */
+/* NAGRANIA  */
 
 .recordings-section {
   position: relative;
@@ -507,7 +476,6 @@ O NAS – FULL BLEED
   overflow: hidden;
 }
 
-/* TŁO */
 .recordings-bg {
   position: absolute;
   inset: 0;
@@ -520,7 +488,6 @@ O NAS – FULL BLEED
   transform: scale(1.2);
 }
 
-/* DELIKATNE PRZYCIEMNIENIE */
 .recordings-overlay {
   position: absolute;
   inset: 0;
@@ -528,19 +495,17 @@ O NAS – FULL BLEED
   z-index: 1;
 }
 
-/* TYTUŁ */
 .recordings-title {
   position: relative;
   z-index: 2;
   padding: 4rem;
-  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
   font-size: clamp(56px, 7vw, 90px);
   color: #d6300c;
 }
 
-/* LINK NA DOLE */
 .recordings-link {
   position: absolute;
   bottom: 4rem;
@@ -549,9 +514,8 @@ O NAS – FULL BLEED
   z-index: 2;
 }
 
-/* BUTTON */
 .recordings-button {
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: 15px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -567,10 +531,8 @@ O NAS – FULL BLEED
   border-color: #fffff1;
 }
 
-
-/* =====================
-   FOOTER – KONTAKT
-===================== */
+/* 
+   FOOTER – KONTAKT */
 
 .contact-footer {
   width: 100%;
@@ -578,7 +540,6 @@ O NAS – FULL BLEED
   color: #fffff1;
 }
 
-/* GÓRNY PAS */
 .contact-top {
   min-height: 35vh;
   display: flex;
@@ -586,12 +547,11 @@ O NAS – FULL BLEED
   justify-content: center;
   padding: 4rem;
   position: relative;
-   
 }
 
 .contact-title {
   text-align: center;
-  font-family: 'Noto Serif Display ExtraCondensed', serif;
+  font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
   font-size: 90px;
@@ -599,7 +559,6 @@ O NAS – FULL BLEED
   margin-bottom: 3rem;
 }
 
-/* OSOBY */
 .contact-people {
   display: flex;
   justify-content: space-between;
@@ -612,18 +571,17 @@ O NAS – FULL BLEED
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: 26px;
   text-transform: uppercase;
   color: #fffff1;
-    text-align: center;
+  text-align: center;
 }
 
 .contact-person .role {
   opacity: 0.85;
 }
 
-/* DOLNA CZĘŚĆ */
 .contact-bottom {
   position: relative;
   min-height: 65vh;
@@ -631,21 +589,19 @@ O NAS – FULL BLEED
 }
 
 .contact-bg {
- position: absolute;   /* ← TO JEST KLUCZ */
-  inset: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-   object-position: 50% 25%;
+  object-position: 50% 25%;
   filter: grayscale(100%);
   z-index: 0;
- 
 }
 
 /* INFO */
 .contact-info {
- position: absolute;
-  bottom: 2.5rem;          /* odległość od dołu zdjęcia */
+  position: absolute;
+  bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -655,7 +611,7 @@ O NAS – FULL BLEED
   align-items: center;
   gap: 1rem;
 
-  font-family: 'Garet', sans-serif;
+  font-family: "Garet", sans-serif;
   font-size: 26px;
   font-weight: 600;
   text-transform: uppercase;
@@ -663,7 +619,6 @@ O NAS – FULL BLEED
   text-align: center;
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .contact-top {
     padding: 3rem 2rem;
@@ -688,10 +643,97 @@ O NAS – FULL BLEED
     padding: 2rem;
     text-align: center;
   }
-    .contact-bg {
+  .contact-bg {
     object-fit: contain;
-    object-position: center; /* lub center top w zależności od kadru */
-    width: 100%;
-    height: auto; /* wysokość dopasuje się proporcjonalnie */
+    object-position: center;
+    height: auto;
   }
+}
+
+.contact-footer a.phone,
+.contact-info a {
+  color: #fffff1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-footer a.phone:hover {
+  color: #b5231f;
+}
+
+/* COOKIE BANNER */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #141313;
+  color: #fffff1;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+}
+
+.cookie-banner.hidden {
+  display: none;
+}
+
+.cookie-text {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cookie-btn {
+  background: transparent;
+  border: 1px solid #fffff1;
+  color: #fffff1;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: all 0.25s ease;
+}
+
+.cookie-btn:hover {
+  background-color: rgba(255, 255, 241, 0.08);
+}
+.cookie-link {
+  color: #fffff1;
+  font-size: 12px;
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.cookie-link:hover,
+.cookie-link:focus {
+  color: #fffff1;
+  opacity: 1;
+}
+
+.cookies-page {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  color: #fffff1;
+}
+
+.cookies-page h1,
+.cookies-page h2 {
+  margin-bottom: 15px;
+}
+
+.cookies-page p,
+.cookies-page li {
+  line-height: 1.7;
 }

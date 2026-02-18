@@ -1,239 +1,280 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sonorelab</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-
-  <!-- Header z menu -->
-  <header class="site-header">
-    <nav class="nav">
-      <ul class="nav-list">
-  <li><a href="#hero">Home</a></li>
-  <li><a href="#project">O projekcie</a></li>
-  <li><a href="#about">O nas</a></li>
-  <li><a href="#sonorelab">Sonore LAB</a></li>
-  <li><a href="#recordings">Nagrania</a></li>
-  <li><a href="#contact">Kontakt</a></li>
-</ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Sekcje -->
-
-<main>
-<section id="hero" class="hero">
-  <img src="assets/IMG_2181.PNG" alt="Sonore LAB" class="hero-img" />
-  <div class="hero-overlay">
-    <h1 class="hero-title">Sonore LAB</h1>
-    <p class="hero-subtitle">EARLY MUSIC REIMAGINED</p>
-  </div>
-</section>
-
-
-<section id="project" class="project">
-  <div class="project-left">
-    <img
-      src="assets/Gabriela sesja 5.jpg"
-      alt="Sonore LAB ensemble"
-      class="project-bg"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SonoreLAB Early Music Reimagined - autorski projekt muzyczny łączący barokową tradycję z nowoczesnym brzmieniem."
     />
+    <meta
+      name="keywords"
+      content="SonoreLAB, muzyka dawna, early music, baroque cover, visual media, wizualizacje, improwizacja, muzyka, Vivaldi, Four Season"
+    />
+    <meta name="author" content="SonoreLAB" />
+    <title>SonoreLAB – Early Music Reimagined</title>
 
-    <div class="project-heading">
-      <h2 class="project-title">O projekcie</h2>
-      <p class="project-subtitle">VIVALDI REIMAGINED</p>
-    </div>
-  </div>
+    <meta property="og:title" content="SonoreLAB – Early Music Reimagined" />
+    <meta
+      property="og:description"
+      content="SonoreLAB Early Music Reimagined - autorski projekt muzyczny łączący barokową tradycję z nowoczesnym brzmieniem."
+    />
+    <meta
+      property="og:image"
+      content="https://www.sonorelab.com/assets/IMG_2181.PNG"
+    />
+    <meta property="og:url" content="https://www.sonorelab.com/" />
+    <meta property="og:type" content="website" />
 
-  <div class="project-right">
-    <p>
-     <span class="highlight">VIVALDI REIMAGINED</span>  to autorski projekt obejmujący zarówno
-      „Cztery pory roku”, jak i rzadziej wykonywane perły epoki baroku, ukazane
-      w nowoczesnym kontekście artystycznym.
-    </p>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SonoreLAB – Early Music Reimagined" />
+    <meta
+      name="twitter:description"
+      content="SonoreLAB Early Music Reimagined - autorski projekt muzyczny łączący barokową tradycję z nowoczesnym brzmieniem."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.sonorelab.com/assets/IMG_2181.PNG"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-    <p>
-      <strong>Projekcje świetlne oraz wizualizacje z obrazem i napisami</strong>
-      wzmacniają przekaz muzyczny, ułatwiają odbiór i budują atrakcyjną warstwę
-      estetyczno-edukacyjną spektaklu.
-    </p>
+    <meta name="geo.placename" content="Katowice, Polska" />
+    <meta name="geo.region" content="PL-KT" />
+    <meta name="geo.position" content="50.2649;19.0238" />
+    <meta name="ICBM" content="50.2649,19.0238" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+          <li><a href="#project" data-i18n="nav.project">O projekcie</a></li>
 
-    <p>
-      Przewodnim punktem programu jest cykl koncertów „Cztery pory roku”
-      Antonio Vivaldiego – zaprezentowane w nowej interpretacji, która z pełnym
-      szacunkiem dla oryginału łączy wierność barokowej formy z twórczą swobodą,
-      pozwalając odkryć te słynne koncerty na nowo.
-    </p>
+          <li><a href="#about" data-i18n="nav.about">O nas</a></li>
+          <li><a href="#sonorelab" data-i18n="nav.lab">Sonore LAB</a></li>
+          <li><a href="#recordings" data-i18n="nav.recordings">Nagrania</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-    <p>
-      Repertuar może być elastycznie dopasowany do charakteru wydarzenia –
-      od kameralnych koncertów, przez festiwale, po projekty edukacyjne
-      i multi-medialne.
-    </p>
-  </div>
-</section>
+        <div class="lang-switch">
+          <button data-lang="pl" class="active">PL</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </nav>
+    </header>
 
+    <main>
+      <section id="hero" class="hero">
+        <img
+          alt="SonoreLAB"
+          src="assets/IMG_2181.PNG"
+          alt="Sonore LAB"
+          class="hero-img"
+        />
+        <div class="hero-overlay">
+          <h1 class="hero-title">Sonore LAB</h1>
+          <p class="hero-subtitle">EARLY MUSIC REIMAGINED</p>
+        </div>
+      </section>
 
+      <section id="project" class="project">
+        <div class="project-left">
+          <img
+            alt="SonoreLAB"
+            src="assets/Gabriela sesja 5.jpg"
+            alt="Sonore LAB ensemble"
+            class="project-bg"
+          />
 
-<section id="about" class="about-section">
-  <!-- ZDJĘCIE W HTML -->
-  <img
-    src="assets/IMG_2179.PNG"
-    alt=""
-    class="about-bg"
-    aria-hidden="true"
-  />
+          <div class="project-heading">
+            <h2 class="project-title" data-i18n="project.title">O projekcie</h2>
+            <p class="project-subtitle">VIVALDI REIMAGINED</p>
+          </div>
+        </div>
 
-  <div class="about-overlay"></div>
+        <div class="project-right">
+          <p data-i18n="project.text"></p>
+        </div>
+      </section>
 
-  <div class="about-inner">
-    <!-- LEWA -->
-    <div class="about-left">
-      <h2 class="about-title">O nas</h2>
+      <section id="about" class="about-section">
+        <img
+          alt="SonoreLAB"
+          src="assets/IMG_2179.PNG"
+          alt=""
+          class="about-bg"
+          aria-hidden="true"
+        />
 
-      <p class="about-text">
-  <strong>
-          SonoreLAB </strong> to sześcioosobowy zespół kameralny –
-         <strong> kwintet smyczkowy z towarzyszeniem klawesynu –</strong>
-     
-        powołany z myślą o twórczym dialogu pomiędzy
-        muzyczną tradycją baroku, a współczesnym językiem
-        artystycznym. Zespół tworzą doświadczeni
-        instrumentaliści, których łączy pasja do muzyki
-        dawnej, poszukiwanie nowych form interpretacji
-        oraz chęć przedstawiania muzycznych
-        arcydzieł nowym odbiorcom.
+        <div class="about-overlay"></div>
+
+        <div class="about-inner">
+          <div class="about-left">
+            <h2 class="about-title" data-i18n="about.title">O nas</h2>
+
+            <p class="about-text" data-i18n="about.text">
+              <strong> SonoreLAB </strong> to sześcioosobowy zespół kameralny –
+              <strong> kwintet smyczkowy z towarzyszeniem klawesynu –</strong>
+
+              powołany z myślą o twórczym dialogu pomiędzy muzyczną tradycją
+              baroku, a współczesnym językiem artystycznym. Zespół tworzą
+              doświadczeni instrumentaliści, których łączy pasja do muzyki
+              dawnej, poszukiwanie nowych form interpretacji oraz chęć
+              przedstawiania muzycznych arcydzieł nowym odbiorcom.
+            </p>
+          </div>
+
+          <div class="about-right">
+            <span class="about-team-title" data-i18n="about.teamTitle"
+              >SKŁAD ZESPOŁU</span
+            >
+
+            <div class="about-line"></div>
+
+            <ul class="about-team-list" data-i18n="about.teamList">
+              <li>
+                <strong>Gabriela Kubarska</strong> <span>| skrzypce</span>
+              </li>
+              <li>
+                <strong>Joanna Zagajewska</strong> <span>| skrzypce</span>
+              </li>
+              <li><strong>Daria Kubik</strong> <span>| klawesyn</span></li>
+              <li><strong>Szymon Stochniol</strong> <span>| altówka</span></li>
+              <li>
+                <strong>Krzysztof Krawczyk</strong> <span>| wiolonczela</span>
+              </li>
+              <li><strong>Dominik Polak</strong> <span>| kontrabas</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="sonorelab" class="sonorelab">
+        <div class="sonorelab-left">
+          <h2 class="sonorelab-title">Sonore LAB</h2>
+
+          <p class="sonorelab-subtitle">EARLY MUSIC REIMAGINED</p>
+          <br />
+
+          <p class="sonorelab-text" data-i18n="sonorelab.text">
+            <strong>Wyjątkowy projekt muzyczny</strong><br />
+            łączący szlachetność barokowej tradycji z nowoczesnym brzmieniem i
+            świeżym spojrzeniem na arcydzieła sprzed wieków.<br />
+
+            Artyści <strong>podejmują odważny dialog </strong>z historią,
+            tworząc przestrzeń,<br />
+            w której klasyczna forma spotyka współczesną ekspresję,<br />
+            improwizację i nowe środki wyrazu.
+          </p>
+        </div>
+
+        <div class="sonorelab-right">
+          <img
+            alt="SonoreLAB"
+            src="assets/Gabriela sesja 17.jpg"
+            alt="Sonore Lab ensemble"
+            class="sonorelab-image"
+          />
+        </div>
+      </section>
+
+      <section id="recordings" class="recordings-section">
+        <img
+          alt="SonoreLAB"
+          src="assets/IMG_2178.PNG"
+          alt=""
+          class="recordings-bg"
+          aria-hidden="true"
+        />
+
+        <div class="recordings-overlay"></div>
+
+        <h2 class="recordings-title" data-i18n="recordings.title">Nagrania</h2>
+
+        <div class="recordings-link">
+          <a
+            href="https://drive.google.com/drive/folders/1HD24a0PCqzW0d44wWEAjsuk9vtihtKpC"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="recordings-button"
+            data-i18n="recordings.link"
+          >
+            LINK DO GOOGLE DYSK
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="contact-footer">
+      <div class="contact-top">
+        <h2 class="contact-title" data-i18n="contact.title">Kontakt</h2>
+
+        <div class="contact-people">
+          <div class="contact-person">
+            <strong class="name">GABRIELA KUBARSKA</strong>
+            <span class="role" data-i18n="contact.artisticDirector"
+              >DYREKTOR ARTYSTYCZNY</span
+            >
+            <a href="tel:+48511265936" class="phone">+48 511 265 936</a>
+          </div>
+
+          <div class="contact-person">
+            <strong class="name">DARIA KUBIK</strong>
+            <span class="role">PROJECT MANAGER</span>
+            <a href="tel:+48692428102" class="phone">+48 692 428 102</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-bottom">
+        <img
+          alt="SonoreLAB"
+          src="assets/Gabriela sesja 3.jpg"
+          alt=""
+          aria-hidden="true"
+          class="contact-bg"
+        />
+
+        <div class="contact-info">
+          <a href="mailto:sonorelab@gmail.com">SONORELAB@GMAIL.COM</a>
+          <span>@SONORELAB</span>
+          <span>WWW.SONORELAB.COM</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <div id="cookie-banner" class="cookie-banner">
+      <p class="cookie-text" data-i18n="cookies.text">
+        Ta strona używa plików cookies w celach funkcjonalnych i analitycznych.
+        Możesz zaakceptować wszystkie cookies lub dostosować swoje preferencje.
       </p>
-    </div>
 
-    <!-- PRAWA -->
-    <div class="about-right">
-      <span class="about-team-title">SKŁAD ZESPOŁU</span>
-
-      <!-- LINIA -->
-      <div class="about-line"></div>
-
-      <ul class="about-team-list">
-        <li><strong>Gabriela Kubarska</strong> <span>| skrzypce</span></li>
-        <li><strong>Joanna Zagajewska</strong> <span>| skrzypce</span></li>
-        <li><strong>Daria Kubik</strong> <span>| klawesyn</span></li>
-        <li><strong>Szymon Stochniol</strong> <span>| altówka</span></li>
-        <li><strong>Krzysztof Krawczyk</strong> <span>| wiolonczela</span></li>
-        <li><strong>Dominik Polak</strong> <span>| kontrabas</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="sonorelab" class="sonorelab">
-  <!-- LEWA CZĘŚĆ -->
-  <div class="sonorelab-left">
-    <h2 class="sonorelab-title">Sonore LAB</h2>
-
-   <p class="sonorelab-subtitle">EARLY MUSIC REIMAGINED</p> <br>
-
-    <p class="sonorelab-text">
-      <strong>Wyjątkowy projekt muzyczny</strong><br>
-      łączący szlachetność barokowej tradycji z nowoczesnym
-      brzmieniem i świeżym spojrzeniem na arcydzieła sprzed wieków.<br>
-
-      Artyści <strong>podejmują odważny dialog </strong>z historią, tworząc przestrzeń,<br>
-      w której klasyczna forma spotyka współczesną ekspresję,<br>
-      improwizację i nowe środki wyrazu.
-    </p>
-  </div>
-
-  <!-- PRAWA CZĘŚĆ -->
-  <div class="sonorelab-right">
-    <img
-      src="assets/Gabriela sesja 17.jpg"
-      alt="Sonore Lab ensemble"
-      class="sonorelab-image"
-    />
-  </div>
-</section>
-
-
-
-<section id="recordings" class="recordings-section">
-  <img
-    src="assets/IMG_2178.PNG"
-    alt=""
-    class="recordings-bg"
-    aria-hidden="true"
-  />
-
-  <div class="recordings-overlay"></div>
-
-  <h2 class="recordings-title">Nagrania</h2>
-
-  <div class="recordings-link">
-    <a
-      href="https://drive.google.com/drive/folders/1HD24a0PCqzW0d44wWEAjsuk9vtihtKpC"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="recordings-button"
-    >
-      LINK DO GOOGLE DYSK
-    </a>
-  </div>
-</section>
-
-
-  </main>
-
-  <footer id="contact" class="contact-footer">
-  <!-- GÓRNY PAS -->
-  <div class="contact-top">
-    <h2 class="contact-title">Kontakt</h2>
-
-    <div class="contact-people">
-      <div class="contact-person">
-        <span class="name">GABRIELA KUBARSKA</span>
-        <span class="role">DYREKTOR ARTYSTYCZNY</span>
-        <span class="phone">+48 511 265 936</span>
-      </div>
-
-      <div class="contact-person">
-        <span class="name">DARIA KUBIK</span>
-        <span class="role">PROJECT MANAGER</span>
-        <span class="phone">+48 692 428 102</span>
+      <div class="cookie-actions">
+        <button
+          class="cookie-btn accept"
+          data-cookie="accept"
+          data-i18n="cookies.accept"
+        >
+          Akceptuj
+        </button>
+        <button
+          class="cookie-btn reject"
+          data-cookie="reject"
+          data-i18n="cookies.reject"
+        >
+          Odrzuć
+        </button>
+        <a href="cookies.html" class="cookie-link" data-i18n="cookies.more">
+          Dowiedz się więcej
+        </a>
       </div>
     </div>
-  </div>
-
-  <!-- DOLNE ZDJĘCIE -->
-  <div class="contact-bottom">
-    <img
-      src="assets/Gabriela sesja 3.jpg"
-      alt=""
-      aria-hidden="true"
-      class="contact-bg"
-    />
-
-    <div class="contact-info">
-      <span>SONORELAB@GMAIL.COM</span>
-      <span>@SONORELAB</span>
-      <span>WWW.SONORELAB.COM</span>
-    </div>
-  </div>
-</footer>
-
-  <script src="js/script.js"></script>
-
-  
-</body>
+  </body>
 </html>
-
-

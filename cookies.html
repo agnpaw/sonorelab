@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pliki cookies – Sonore LAB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="cookies-page">
+      <h1 data-i18n="cookies.pageTitle">Pliki cookies</h1>
+
+      <p data-i18n="cookies.intro">
+        Strona internetowa Sonore LAB używa plików cookies w celu zapewnienia
+        prawidłowego działania serwisu, poprawy jakości korzystania ze strony
+        oraz – po wyrażeniu zgody – w celach analitycznych.
+      </p>
+
+      <h2 data-i18n="cookies.whatAre">Czym są pliki cookies?</h2>
+      <p data-i18n="cookies.whatAreText">
+        Cookies to niewielkie pliki tekstowe zapisywane na urządzeniu
+        użytkownika podczas korzystania ze stron internetowych.
+      </p>
+
+      <h2 data-i18n="cookies.typesTitle">Jakie cookies wykorzystujemy?</h2>
+      <ul>
+        <li data-i18n="cookies.typeNecessary">
+          <strong>Niezbędne</strong> – umożliwiają prawidłowe działanie strony
+        </li>
+        <li data-i18n="cookies.typeAnalytical">
+          <strong>Analityczne</strong> – pozwalają analizować sposób korzystania
+          ze strony (po wyrażeniu zgody)
+        </li>
+      </ul>
+
+      <h2 data-i18n="cookies.manageTitle">Zarządzanie cookies</h2>
+      <p data-i18n="cookies.manageText">
+        Użytkownik może w każdej chwili zmienić ustawienia dotyczące cookies w
+        swojej przeglądarce internetowej.
+      </p>
+    </main>
+
+    <script>
+      const cookiesTranslations = {
+        pl: {
+          "cookies.pageTitle": "Pliki cookies",
+          "cookies.intro":
+            "Strona internetowa Sonore LAB używa plików cookies w celu zapewnienia prawidłowego działania serwisu, poprawy jakości korzystania ze strony oraz – po wyrażeniu zgody – w celach analitycznych.",
+          "cookies.whatAre": "Czym są pliki cookies?",
+          "cookies.whatAreText":
+            "Cookies to niewielkie pliki tekstowe zapisywane na urządzeniu użytkownika podczas korzystania ze stron internetowych.",
+          "cookies.typesTitle": "Jakie cookies wykorzystujemy?",
+          "cookies.typeNecessary":
+            "Niezbędne – umożliwiają prawidłowe działanie strony",
+          "cookies.typeAnalytical":
+            "Analityczne – pozwalają analizować sposób korzystania ze strony (po wyrażeniu zgody)",
+          "cookies.manageTitle": "Zarządzanie cookies",
+          "cookies.manageText":
+            "Użytkownik może w każdej chwili zmienić ustawienia dotyczące cookies w swojej przeglądarce internetowej.",
+        },
+        en: {
+          "cookies.pageTitle": "Cookies",
+          "cookies.intro":
+            "The Sonore LAB website uses cookies to ensure proper functioning of the site, improve the browsing experience, and – with consent – for analytical purposes.",
+          "cookies.whatAre": "What are cookies?",
+          "cookies.whatAreText":
+            "Cookies are small text files stored on the user’s device while using websites.",
+          "cookies.typesTitle": "Which cookies do we use?",
+          "cookies.typeNecessary":
+            "Necessary – allow the website to function properly",
+          "cookies.typeAnalytical":
+            "Analytical – help analyze how the website is used (with consent)",
+          "cookies.manageTitle": "Managing cookies",
+          "cookies.manageText":
+            "The user can change their cookie settings at any time in their web browser.",
+        },
+      };
+
+      const lang = localStorage.getItem("lang") || "pl";
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.dataset.i18n;
+        if (cookiesTranslations[lang] && cookiesTranslations[lang][key]) {
+          el.textContent = cookiesTranslations[lang][key];
+        }
+      });
+    </script>
+  </body>
+</html>
