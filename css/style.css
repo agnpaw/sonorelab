@@ -41,6 +41,8 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: 400;
+  font-family: "Garet", sans-serif;
+  font-size: clamp(12px, 2.5vw, 16px);
 }
 
 /* HAMBURGER */
@@ -121,11 +123,12 @@ body {
 
 .hero-subtitle {
   font-family: "Garet", sans-serif;
-  font-size: clamp(14px, 2vw, 25px);
+  font-size: clamp(12px, 2.5vw, 25px);
   font-weight: 300;
   letter-spacing: 6px;
   text-transform: uppercase;
   margin-top: 12px;
+  white-space: nowrap;
 }
 
 /* RESPONSIVE NAV */
@@ -200,10 +203,12 @@ body {
 
 .project-subtitle {
   font-family: "Garet", sans-serif;
-  font-size: 26px;
-  letter-spacing: 4px;
+  font-size: clamp(12px, 2.5vw, 25px);
+  letter-spacing: 6px;
   color: #ffffff;
   margin-top: 0.5rem;
+  font-weight: 300;
+  white-space: nowrap;
 }
 
 .project-right {
@@ -216,11 +221,12 @@ body {
 }
 
 .project-right p {
-  font-size: 18px;
+  font-size: clamp(15px, 1.1vw, 20px);
   line-height: 1.7;
   color: #fffff1;
   margin-bottom: 1.8rem;
   max-width: 520px;
+  font-family: "Garet", sans-serif;
 }
 
 .project-right strong {
@@ -274,7 +280,11 @@ body {
     object-position: center top;
   }
 }
-
+@media (max-width: 900px) {
+  .about-section .about-text p {
+    margin-bottom: 1.6rem;
+  }
+}
 .about-section .about-overlay {
   position: absolute;
   inset: 0;
@@ -306,7 +316,7 @@ body {
   font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(56px, 7vw, 90px);
+  font-size: clamp(48px, 7vw, 90px);
   color: #d6300c;
   line-height: 1;
   margin-bottom: 2rem;
@@ -314,7 +324,7 @@ body {
 
 .about-section .about-text {
   font-family: "Garet", sans-serif;
-  font-size: 20px;
+  font-size: clamp(15px, 1.1vw, 20px);
   line-height: 1.7;
   color: #fffff1;
   padding-left: 10%;
@@ -327,7 +337,7 @@ body {
 
 .about-section .about-team-title {
   font-family: "Garet", sans-serif;
-  font-size: 14px;
+  font-size: clamp(14px, 1.1vw, 14px);
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #fffff1;
@@ -348,7 +358,7 @@ body {
 
 .about-section .about-team-list li {
   font-family: "Garet", sans-serif;
-  font-size: 16px;
+  font-size: clamp(11px, 1.1vw, 16px);
   letter-spacing: 1px;
   margin-bottom: 0.8rem;
   color: #fffff1;
@@ -373,7 +383,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-height: 100vh;
-  /* background-color: #141313; */
   overflow: hidden;
 }
 
@@ -389,7 +398,7 @@ body {
   font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 90px;
+  font-size: clamp(48px, 7vw, 90px);
   line-height: 1;
   color: #c22200;
   margin-bottom: 0.2em;
@@ -397,7 +406,7 @@ body {
 
 .sonorelab-text {
   font-family: "Garet", sans-serif;
-  font-size: 20px;
+  font-size: clamp(15px, 1.1vw, 20px);
   line-height: 1.7;
   color: #fffff1;
   max-width: 520px;
@@ -407,6 +416,11 @@ body {
   display: block;
   text-align: center;
   margin-top: 0;
+  letter-spacing: 6px;
+  color: #ffffff;
+  font-weight: 300;
+  white-space: nowrap;
+  font-size: clamp(12px, 2.5vw, 25px);
 }
 
 .sonorelab-right {
@@ -435,20 +449,16 @@ body {
     min-height: 60vh;
   }
 
-  .sonorelab-title {
-    font-size: clamp(48px, 10vw, 72px);
-  }
-
   .sonorelab-right {
-    min-height: 60vh;
-  }
-  .sonorelab-image {
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    height: auto;
+    min-height: auto;
   }
 
+  .sonorelab-image {
+    position: relative;
+    height: auto;
+    object-fit: contain;
+    transform: none;
+  }
   .recordings-title {
     padding: 2.5rem 2rem;
   }
@@ -502,7 +512,7 @@ body {
   font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(56px, 7vw, 90px);
+  font-size: clamp(48px, 7vw, 90px);
   color: #d6300c;
 }
 
@@ -512,11 +522,12 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  margin-bottom: 3rem;
 }
 
 .recordings-button {
   font-family: "Garet", sans-serif;
-  font-size: 15px;
+  font-size: clamp(12px, 1.2vw, 15px);
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #fffff1;
@@ -524,11 +535,60 @@ body {
   padding: 0.8rem 2.5rem;
   border: 1px solid rgba(255, 255, 241, 0.6);
   transition: all 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 .recordings-button:hover {
   background-color: rgba(255, 255, 241, 0.1);
   border-color: #fffff1;
+}
+
+.recordings-youtube {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 4rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+
+.recordings-youtube .youtube-button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 241, 0.6);
+  color: #fffff1;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: "Garet", sans-serif;
+  font-size: clamp(12px, 1.2vw, 15px);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  white-space: normal;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+.recordings-youtube .youtube-button:hover {
+  background-color: rgba(255, 255, 241, 0.1);
+  border-color: #fffff1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .recordings-youtube {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 300px;
+    max-width: 90vw;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* 
@@ -554,7 +614,7 @@ body {
   font-family: "Noto Serif Display ExtraCondensed", serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 90px;
+  font-size: clamp(48px, 7vw, 90px);
   color: #d6300c;
   margin-bottom: 3rem;
 }
@@ -572,7 +632,7 @@ body {
   flex-direction: column;
   gap: 0.4rem;
   font-family: "Garet", sans-serif;
-  font-size: 26px;
+  font-size: clamp(15px, 1.1vw, 25px);
   text-transform: uppercase;
   color: #fffff1;
   text-align: center;
@@ -612,7 +672,7 @@ body {
   gap: 1rem;
 
   font-family: "Garet", sans-serif;
-  font-size: 26px;
+
   font-weight: 600;
   text-transform: uppercase;
   color: #fffff1;
@@ -624,24 +684,17 @@ body {
     padding: 3rem 2rem;
   }
 
-  .contact-title {
-    font-size: clamp(56px, 10vw, 72px);
-  }
-
   .contact-people {
     flex-direction: column;
     gap: 3rem;
     text-align: center;
   }
 
-  .contact-person {
-    font-size: 22px;
-  }
-
   .contact-info {
-    font-size: 22px;
+    font-size: clamp(15px, 1.1vw, 25px);
     padding: 2rem;
     text-align: center;
+    bottom: 1.2rem;
   }
   .contact-bg {
     object-fit: contain;
@@ -736,4 +789,48 @@ body {
 .cookies-page p,
 .cookies-page li {
   line-height: 1.7;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 1rem 0 1.2rem;
+  background-color: #000;
+}
+
+.footer-socials a {
+  color: #fffff1;
+  font-size: 22px;
+  opacity: 0.8;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-socials a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.project-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.project-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.project-dots button.active {
+  background: #fff;
 }
