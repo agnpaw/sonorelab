@@ -45,6 +45,34 @@ body {
   font-size: clamp(12px, 2.5vw, 16px);
 }
 
+.nav-item-project {
+  position: relative;
+}
+
+.nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: black;
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+}
+
+.nav-submenu li {
+  list-style: none;
+}
+
+.nav-submenu a {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.nav-item-project:hover .nav-submenu {
+  display: flex;
+}
+
 /* HAMBURGER */
 .hamburger {
   display: none;
@@ -151,6 +179,16 @@ body {
   .hamburger {
     display: flex;
   }
+  .hero-img {
+    object-fit: contain;
+    transform: scale(1.3);
+  }
+    .hero {
+    height: 70vh;
+  }
+   
+
+ 
 }
 
 /* O PROJEKCIE – LAYOUT */
@@ -237,7 +275,18 @@ body {
   font-weight: 600;
   color: #b5231f;
 }
+.project-subtitle {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
 
+/* podświetlenie aktywnego projektu */
+.project-subtitle.active {
+  background-color: #8d8b8b; /* np. jasne tło */
+  font-weight: bold;
+}
 @media (max-width: 900px) {
   .project {
     grid-template-columns: 1fr;
@@ -414,7 +463,7 @@ body {
 
 .sonorelab-subtitle {
   display: block;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 0;
   letter-spacing: 6px;
   color: #ffffff;
@@ -536,6 +585,8 @@ body {
   border: 1px solid rgba(255, 255, 241, 0.6);
   transition: all 0.3s ease;
   margin-bottom: 1rem;
+    white-space: normal;
+  text-align: center;
 }
 
 .recordings-button:hover {
@@ -578,7 +629,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .recordings-youtube {
+  .recordings-youtube  {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -588,6 +639,12 @@ body {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+  }
+   .recordings-button {
+        display: block;
+    width: 300px;
+    max-width: 90vw;
+    margin: 0 auto 1rem;
   }
 }
 
