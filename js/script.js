@@ -211,7 +211,7 @@ Przewodnim punktem programu jest cykl koncertów „Cztery pory roku” Antonio 
 w nowej interpretacji, która z pełnym szacunkiem 
 dla oryginału łączy wierność barokowej formy z twórczą swobodą, pozwalając odkryć te słynne koncerty na nowo.<br><br>
 
-Repertuar może być elastycznie dopasowany do charakteru wydarzenia – od kameralnych koncertów, przez festiwale, po projekty edukacyjne i multi-medialne.`,
+Repertuar może być elastycznie dopasowany do charakteru wydarzenia – od kameralnych koncertów, przez festiwale, po projekty edukacyjne i multimedialne.`,
 },
 {
 subtitle: "HAYDN REIMAGINED",
@@ -317,7 +317,7 @@ While honoring the classical form and period style, the project offers a holisti
   // LANGUAGE SUPPORT
   // ----------------------------
   const translations = { pl: {
-"hero.title": "SonoreLAB",
+"hero.title": "Sonore LAB",
 "hero.subtitle": "EARLY MUSIC REIMAGINED",
 "project.title": "O projektach",
 "project.text": `<span class="highlight">VIVALDI REIMAGINED</span> to autorski projekt obejmujący zarówno
